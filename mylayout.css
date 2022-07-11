@@ -1,0 +1,53 @@
+*{margin: auto; padding: 0%; overflow: hidden;}
+body{
+    width: 900px;
+    height: 800px;
+    background-color: aquamarine;
+}
+header{
+    width: 900px;
+    height: 200px;
+    background-color: blanchedalmond;
+}
+header img{
+    margin-top: 60px;
+    margin-left: 50px;
+    float: left;
+}
+.heades{
+    font-size: 120px;
+    margin-left: 80px;
+    margin-top: 10px;
+    float: left;
+}
+.navi{
+    width: 900px;
+    height: 30px;
+    background-color: burlywood;
+}
+ul li{
+    height: 30px;
+    float: left;
+    background-color: skyblue;
+    padding: 5px 20px;
+    border-right: 2px solid black;
+}
+li:hover{
+    height: 30px;
+    background-color: red;
+}
+li a{
+    text-decoration: none;
+}
+.menus{
+    width: 220px;
+    height: 590px;
+    background-color: cadetblue;
+    float: left;
+}
+.contents{
+    width: 680px;
+    height: 590px;
+    background-color: darkgray;
+    float: left;
+}

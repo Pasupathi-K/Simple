@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add or Remove text box</title>
+    <script>
+        var divid=0;
+        function add(){
+        divid++;
+        const fname=document.getElementById("fname").value
+        const lname=document.getElementById("lname").value
+        const reqs=document.getElementById("demo")
+        let main=document.createElement("div")
+        main.setAttribute('id','reqa'+divid);
+        let addfname = document.createElement("input")
+        addfname.setAttribute('type',"text");
+        addfname.setAttribute('placeholder',"First Name");
+        addfname.setAttribute('id','fname'+divid);
+        let addlname = document.createElement("input")
+        addlname.setAttribute('type',"text");
+        addlname.setAttribute('placeholder',"Last Name");
+        addlname.setAttribute('id','lname'+divid);
+        let remove = document.createElement("input")
+        remove.setAttribute('id','reqr'+divid);
+        remove.setAttribute('type',"button");
+        remove.setAttribute('value',"Remove");
+        main.appendChild(addfname)
+        main.appendChild(addlname)
+        reqs.appendChild(main)
+        reqs.appendChild(remove)
+        document.getElementById('fname'+divid).value=fname
+        document.getElementById('lname'+divid).value=lname
+        document.getElementById('fname'+divid).style.margin="5px 0px";
+        document.getElementById('lname'+divid).style.margin="5px 0px 5px 5px";
+        document.getElementById('reqr'+divid).style.margin="5px 0px 5px 5px";
+        document.getElementById("fname").value=''
+        document.getElementById("lname").value=''
+        remove.onclick = function(e){field_remove(e)};
+        }
+        function field_remove(ev){
+           var rem=ev.target;
+           var remo=rem.previousSibling;
+           var div=rem.parentElement;
+           div.removeChild(rem);
+           div.removeChild(remo);
+
+        }
+    </script>
+    <style>
+        #del{
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" placeholder="First Name" id="fname">
+    <input type="text" placeholder="Last Name" id="lname">
+    <input type="button" onclick="add()" value="Add">
+    <p id="demo"></p>
+</body>
+</html>

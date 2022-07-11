@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 6fr;
+    grid-template-areas: 
+    'header header header'
+    'heads1 heads2 heads3'
+    'print_space1 print_space2 print_space3';
+}
+header{
+    background-color: rgb(236, 167, 82);
+    grid-area: header;
+}
+header p{
+    text-align: center;
+    margin-top: 20px;
+    font-size: xx-large;
+}
+.heads1{
+    background-color: rgb(51, 50, 48);
+    grid-area: heads1;
+    border: 5px solid rgb(112, 100, 100);
+    border-bottom: none !important;
+}
+.heads2{
+    background-color: rgb(51, 50, 48);
+    grid-area: heads2;
+    border: 5px solid rgb(112, 100, 100);
+    border-bottom: none !important;
+}
+.heads3{
+    background-color: rgb(51, 50, 48);
+    grid-area: heads3;
+    border: 5px solid rgb(112, 100, 100);
+    border-bottom: none !important;
+}
+.print_space1{
+    background-color: rgba(209, 156, 87, 0.5);
+    grid-area: print_space1;
+    border: 5px solid rgb(112, 100, 100);
+    border-top: none !important;
+}
+.print_space2{
+    background-color: rgba(209, 156, 87, 0.5);
+    grid-area: print_space2;
+    border: 5px solid rgb(112, 100, 100);
+    border-top: none !important;
+}
+.print_space3{
+    background-color: rgba(209, 156, 87, 0.5);
+    grid-area: print_space3;
+    border: 5px solid rgb(112, 100, 100);
+    border-top: none !important;
+}
+.heads1, .heads2, .heads3{
+    text-align: center;
+    padding-top: 25px;
+    font-size: 25px;
+    color: white;
+}
+#num1, #num2, #num3{
+    width: 200px;
+    height: 25px;
+    margin-top: 25px;
+    margin-left: 100px;
+}
+#sub1, #sub2, #sub3{
+    width:100px;
+    height: 29px;
+    margin-top: 25px;
+}
+#prime, #fibo, #fact{
+   text-align: center;
+   margin-top: 5px;
+   color: rgb(131, 11, 11);
+}

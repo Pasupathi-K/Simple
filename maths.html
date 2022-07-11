@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Math Solutions</title>
+    <link rel="stylesheet" href="maths.css">
+    <script>
+        function myfunction1(){
+            let text="";
+            let num=document.getElementById("num1").value;
+            for(i=0;i<=num;i++){
+                if(i==1 || i==2 || i==3){
+                    text+=i+"<br>";
+                    document.getElementById("prime").innerHTML=text;
+                }
+                else if(i>3){
+                    if(i%2==0){
+                        continue;
+                    }
+                    else if(i%3==0){
+                        continue;
+                    }
+                    text+=i+"<br>";
+                }
+                document.getElementById("prime").innerHTML=text;
+            }
+        }
+        function myfunction2(){
+            let a=0;
+            let b=1;
+            let num=document.getElementById("num2").value;
+            document.getElementById("fibo").innerHTML= a +"<br>" + b + "<br>";
+            for(let i=2; i<=num; i++){
+                let c=a+b;
+                document.getElementById("fibo").innerHTML+=c+"<br>";
+                a=b;
+                b=c;
+            }
+        }
+        function myfunction3(){
+            document.getElementById("fact").innerHTML="";
+            let num=document.getElementById("num3").value;
+            for(let a=num; num>2; num--){
+                let b=num-1;
+                a=a*b;
+                document.getElementById("fact").innerHTML+=a+"<br>";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="main">
+        <header>
+        <p><b>Math Solutions</b></p>
+        </header>
+        <div class="heads1">
+            <p>Prime Numbers</p></div>
+        <div class="print_space1">
+            <input type="number" id="num1" name="num1">
+            <input type="submit" value="Submit" id="sub1" onclick="myfunction1()">
+            <p id="prime"></p>
+        </div>
+        <div class="heads2">
+            <p>Fibonacci series</p></div>
+        <div class="print_space2">
+            <input type="number" id="num2" name="num2">
+            <input type="submit" value="Submit" id="sub2" onclick="myfunction2()">
+            <p id="fibo"></p>
+        </div>
+        <div class="heads3">
+            <p>Factorial Numbers</p></div>
+        <div class="print_space3">
+            <input type="number" id="num3" name="num3">
+            <input type="submit" value="Submit" id="sub3" onclick="myfunction3()">
+            <p id="fact"></p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Factorial</title>
+    <script>
+        function myfun(){
+            let num = document.getElementById("num").value;
+            for(let a=num; num>1; num--){
+                let b=num-1;
+                a*=b;
+                document.getElementById("demo").innerHTML+=a + "<br>";
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="num">
+    <input type="submit" id="val" value="Submit" onclick="myfun()">
+    <p id="demo"></p>
+</body>
+</html>

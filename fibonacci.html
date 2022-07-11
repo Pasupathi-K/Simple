@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Fibonacci</title>
+    <script>
+        function myfun(){
+            let a=0;
+            let b=1;
+            let num=document.getElementById("num").value;
+            document.getElementById("demo").innerHTML+= a +"<br>" + b + "<br>";
+            for(let i=2; i<num; i++){
+                c=a+b;
+                document.getElementById("demo").innerHTML+= c + "<br>";
+                a=b;
+                b=c;
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="num">
+    <input type="submit" id="val" value="Submit" onclick="myfun()">
+    <p id="demo"></p>
+</body>
+</html>
